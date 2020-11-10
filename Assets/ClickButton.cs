@@ -6,6 +6,9 @@ public class ClickButton : MonoBehaviour
 {
     public Material DefaultColor;
     public Material HighlightColor;
+    public delegate void ClickEvent(int number);
+    public event ClickEvent onClick;
+    public int CubeNumber = 99;
 
     public Renderer renderer;
     // Start is called before the first frame update
@@ -23,6 +26,7 @@ public class ClickButton : MonoBehaviour
 
     void OnMouseDown () {
         ClickedColor();
+        onClick.Invoke(CubeNumber);
     }
 
     void OnMouseUp() {
