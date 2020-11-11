@@ -29,7 +29,8 @@ public class Logic : MonoBehaviour
         for (int i = 0; i < level; i++)
         {
             if(Numbers.Count < level){
-
+                random = Random.Range(0, Cubes.Length);
+                Numbers.Add(random);
             }
         }
     }
