@@ -10,6 +10,8 @@ public class ClickButton : MonoBehaviour
     public event ClickEvent onClick;
     public int CubeNumber = 99;
 
+    public AudioSource audio;
+
     public Renderer renderer;
     // Start is called before the first frame update
     void Start()
@@ -25,6 +27,7 @@ public class ClickButton : MonoBehaviour
     }
 
     void OnMouseDown () {
+        AudioSource.Play();
         ClickedColor();
         onClick.Invoke(CubeNumber);
     }
