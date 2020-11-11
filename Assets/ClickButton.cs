@@ -16,6 +16,7 @@ public class ClickButton : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        audio = GetComponent<AudioSource>();
         renderer = GetComponent<Renderer>();
         renderer.enabled = true;
     }
@@ -26,21 +27,21 @@ public class ClickButton : MonoBehaviour
         
     }
 
-    void OnMouseDown () {
-        AudioSource.Play();
+    private void OnMouseDown () {
+        audio.Play();
         ClickedColor();
         onClick.Invoke(CubeNumber);
     }
 
-    void OnMouseUp() {
+    private void OnMouseUp() {
         UnclickedColor();
     }
 
-    void ClickedColor(){
+    public void ClickedColor(){
         renderer.sharedMaterial = HighlightColor;
     }
 
-    void UnclickedColor(){
+    public void UnclickedColor(){
         renderer.sharedMaterial = DefaultColor;
     }
 
