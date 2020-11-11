@@ -5,7 +5,10 @@ using UnityEngine;
 public class Logic : MonoBehaviour
 {
     public int level;
+    public int random;
     public ClickButton[] Cubes;
+    public List<int> Numbers;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -25,7 +28,9 @@ public class Logic : MonoBehaviour
         yield return new WaitForSeconds(1f);
         for (int i = 0; i < level; i++)
         {
-            
+            if(Numbers.Count < level){
+
+            }
         }
     }
 }
