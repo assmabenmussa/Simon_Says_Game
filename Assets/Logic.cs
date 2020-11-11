@@ -8,6 +8,8 @@ public class Logic : MonoBehaviour
     public int random;
     public ClickButton[] Cubes;
     public List<int> Numbers;
+    public float showtime = 0.5f;
+    public float pausetime = 0.5f;
 
     // Start is called before the first frame update
     void Start()
@@ -24,7 +26,7 @@ public class Logic : MonoBehaviour
         
     }
 
-    private IEnumerator Logic(){
+    private IEnumerator gameLogic(){
         yield return new WaitForSeconds(1f);
         for (int i = 0; i < level; i++)
         {
@@ -32,6 +34,12 @@ public class Logic : MonoBehaviour
                 random = Random.Range(0, Cubes.Length);
                 Numbers.Add(random);
             }
+             // turn on the corrisponding lights for this level then turn them off
+            Cubes[Numbers[i]].ClickedColor();
+            yield return new WaitForSeconds(showtime);
+
+            Cubes[Numbers[i]].UnclickedColor();
+            yield return new WaitForSeconds(pausetime);
         }
     }
 }
