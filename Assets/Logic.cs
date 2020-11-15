@@ -43,7 +43,7 @@ public class Logic : MonoBehaviour
     public void StartGame()
     {
         AI = true;
-        currentlyReachedButton = 0;
+        currentlyReachedCube = 0;
         level = 1;
         Startbutton.interactable = false;
     }
@@ -55,7 +55,19 @@ public class Logic : MonoBehaviour
     void CubeClicked(int _number){
         Debug.Log("cubeClicked index " + _number);
         if(player) {
-            if(_number == Numbers[currentlyReachedCube])
+            if(_number == Numbers[currentlyReachedCube]){
+                currentlyReachedCube += 1;
+            }
+            else{
+                GameOver();
+            }
+
+            if (currentlyReachedCube == level){
+                level += 1;
+                currentlyReachedCube = 0;
+                player = false;
+                AI = true;
+            }
         }
     }
 
