@@ -6,9 +6,10 @@ public class ClickButton : MonoBehaviour
 {
     public Material DefaultColor;
     public Material HighlightColor;
-    public delegate void ClickEvent(int number);
-    public event ClickEvent onClick;
+    
     public int CubeNumber = 99;
+    public delegate void ClickEvent(int CubeNumber);
+    public event ClickEvent onClick;
 
     public AudioSource audio;
 
