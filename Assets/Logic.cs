@@ -8,7 +8,7 @@ using Button = UnityEngine.UI.Button;
 public class Logic : MonoBehaviour
 {
     public int level;
-    public int random;
+    private int random;
     private int currentlyReachedCube = 0;
 
     public Button Startbutton;
@@ -51,6 +51,7 @@ public class Logic : MonoBehaviour
 
     void GameOver(){
         Debug.Log("Game is over");
+        Startbutton.interactable = true;
     }
 
     void CubeClicked(int _number){
