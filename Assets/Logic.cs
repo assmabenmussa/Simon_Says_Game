@@ -10,13 +10,16 @@ public class Logic : MonoBehaviour
     public List<int> Numbers;
     public float showtime = 0.5f;
     public float pausetime = 0.5f;
+    public bool player = false;
+    public bool logic;
 
     // Start is called before the first frame update
     void Start()
     {
         for (int i = 0; i < Cubes.Length; i++)
         {
-            Debug.Log("Cubes[i]", Cubes[i]);
+            Cubes[i].onClick += cubeClicked;
+            Cubes[i].CubeNumber = i;
         }
     }
 
@@ -26,7 +29,12 @@ public class Logic : MonoBehaviour
         
     }
 
+    void cubeClicked(int _number){
+        Debug.Log("cubeClicked triggered " + _number);
+    }
+
     private IEnumerator gameLogic(){
+        Debug.Log("running IEnumerator");
         yield return new WaitForSeconds(1f);
         for (int i = 0; i < level; i++)
         {
@@ -41,5 +49,6 @@ public class Logic : MonoBehaviour
             Cubes[Numbers[i]].UnclickedColor();
             yield return new WaitForSeconds(pausetime);
         }
+        player = true;
     }
 }
