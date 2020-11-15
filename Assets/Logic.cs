@@ -6,19 +6,23 @@ public class Logic : MonoBehaviour
 {
     public int level;
     public int random;
+    
     public ClickButton[] Cubes;
     public List<int> Numbers;
+
     public float showtime = 0.5f;
     public float pausetime = 0.5f;
+
     public bool player = false;
     public bool logic;
+    public bool AI;
 
     // Start is called before the first frame update
     void Start()
     {
         for (int i = 0; i < Cubes.Length; i++)
         {
-            Cubes[i].onClick += cubeClicked;
+            Cubes[i].onClick += CubeClicked;
             Cubes[i].CubeNumber = i;
         }
     }
@@ -29,8 +33,8 @@ public class Logic : MonoBehaviour
         
     }
 
-    void cubeClicked(int _number){
-        Debug.Log("cubeClicked triggered " + _number);
+    void CubeClicked(int _number){
+        Debug.Log("cubeClicked index " + _number);
     }
 
     private IEnumerator gameLogic(){
