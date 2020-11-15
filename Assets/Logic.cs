@@ -1,12 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Button = UnityEngine.UI.Button;
 
 public class Logic : MonoBehaviour
 {
     public int level;
     public int random;
-    
+    private int currentlyReachedButton = 0;
+
+    public Button Startbutton;
     public ClickButton[] Cubes;
     public List<int> Numbers;
 
@@ -30,8 +33,21 @@ public class Logic : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (AI)
+        {
+            AI = false;
+            StartCoroutine(gameLogic());
+        }
     }
+
+    public void StartGame()
+    {
+        AI = true;
+        currentlyReachedButton = 0;
+        level = 1;
+        Startbutton.interactable = false;
+    }
+
 
     void CubeClicked(int _number){
         Debug.Log("cubeClicked index " + _number);
