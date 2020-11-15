@@ -7,7 +7,7 @@ public class Logic : MonoBehaviour
 {
     public int level;
     public int random;
-    private int currentlyReachedButton = 0;
+    private int currentlyReachedCube = 0;
 
     public Button Startbutton;
     public ClickButton[] Cubes;
@@ -48,9 +48,15 @@ public class Logic : MonoBehaviour
         Startbutton.interactable = false;
     }
 
+    void GameOver(){
+        Debug.Log("Game is over");
+    }
 
     void CubeClicked(int _number){
         Debug.Log("cubeClicked index " + _number);
+        if(player) {
+            if(_number == Numbers[currentlyReachedCube])
+        }
     }
 
     private IEnumerator gameLogic(){
