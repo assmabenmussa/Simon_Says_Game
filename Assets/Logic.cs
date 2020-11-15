@@ -19,8 +19,7 @@ public class Logic : MonoBehaviour
     public float pausetime = 0.5f;
 
     public bool player = false;
-    public bool logic;
-    public bool robot = false;
+    private bool robot = false;
 
     // Start is called before the first frame update
     void Start()
