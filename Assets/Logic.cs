@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.UIElements;
 using Button = UnityEngine.UI.Button;
 
 public class Logic : MonoBehaviour
@@ -18,7 +20,7 @@ public class Logic : MonoBehaviour
 
     public bool player = false;
     public bool logic;
-    public bool AI;
+    public bool robot = false;
 
     // Start is called before the first frame update
     void Start()
@@ -33,16 +35,16 @@ public class Logic : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (AI)
+        if (robot)
         {
-            AI = false;
-            StartCoroutine(gameLogic());
+            robot = false;
+            StartCoroutine(Robot());
         }
     }
 
     public void StartGame()
     {
-        AI = true;
+        robot = true;
         currentlyReachedCube = 0;
         level = 1;
         Startbutton.interactable = false;
@@ -53,7 +55,7 @@ public class Logic : MonoBehaviour
     }
 
     void CubeClicked(int _number){
-        Debug.Log("cubeClicked index " + _number);
+        Debug.Log("player status " + player);
         if(player) {
             if(_number == Numbers[currentlyReachedCube]){
                 currentlyReachedCube += 1;
@@ -66,12 +68,12 @@ public class Logic : MonoBehaviour
                 level += 1;
                 currentlyReachedCube = 0;
                 player = false;
-                AI = true;
+                robot = true;
             }
         }
     }
 
-    private IEnumerator gameLogic(){
+    private IEnumerator Robot(){
         Debug.Log("running IEnumerator");
         yield return new WaitForSeconds(1f);
         for (int i = 0; i < level; i++)
