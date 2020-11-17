@@ -30,6 +30,7 @@ public class ClickButton : MonoBehaviour
 
     private void OnMouseDown () {
         audio.Play();
+        Debug.Log("audio:" + audio);
         ClickedColor();
         onClick.Invoke(CubeNumber);
     }
