@@ -12,6 +12,7 @@ public class ClickButton : MonoBehaviour
     public event ClickEvent onClick;
 
     public AudioSource audio;
+    public AudioClip number_recording;
 
     public Renderer renderer;
     // Start is called before the first frame update
@@ -28,7 +29,6 @@ public class ClickButton : MonoBehaviour
     }
 
     private void OnMouseDown () {
-        audio.Play();
         Debug.Log("audio:" + audio);
         ClickedColor();
         onClick.Invoke(CubeNumber);
@@ -40,6 +40,11 @@ public class ClickButton : MonoBehaviour
 
     public void ClickedColor(){
         renderer.sharedMaterial = HighlightColor;
+    }
+
+    public void HighlightNumber(){
+        renderer.sharedMaterial = HighlightColor;
+        audio.PlayOneShot(number_recording);
     }
 
     public void UnclickedColor(){
