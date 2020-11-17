@@ -82,7 +82,7 @@ public class Logic : MonoBehaviour
                 Numbers.Add(random);
             }
              // turn on the corrisponding lights for this level then turn them off
-            Cubes[Numbers[i]].ClickedColor();
+            Cubes[Numbers[i]].HighlightNumber();
             yield return new WaitForSeconds(showtime);
 
             Cubes[Numbers[i]].UnclickedColor();
