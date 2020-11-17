@@ -55,7 +55,6 @@ public class Logic : MonoBehaviour
     }
 
     void CubeClicked(int _number){
-        Debug.Log("player status " + player);
         if(player) {
             if(_number == Numbers[currentlyReachedCube]){
                 currentlyReachedCube += 1;
