@@ -521,7 +521,7 @@ GameObject:
   - component: {fileID: 226151233}
   - component: {fileID: 226151234}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: Cube_seven
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -616,7 +616,8 @@ MonoBehaviour:
   DefaultColor: {fileID: 2100000, guid: e66ac68e0fbe0274d9534b5938a13d30, type: 2}
   HighlightColor: {fileID: 2100000, guid: b68327858081b5a4e91e9fe88fdfbdbf, type: 2}
   CubeNumber: 7
-  audio: {fileID: 0}
+  audio: {fileID: 226151234}
+  number_recording: {fileID: 8300000, guid: 8d5ee7504e096094597d167977a5e06d, type: 3}
   renderer: {fileID: 0}
 --- !u!82 &226151234
 AudioSource:
@@ -628,7 +629,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 8d5ee7504e096094597d167977a5e06d, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -1048,7 +1049,7 @@ GameObject:
   - component: {fileID: 444477364}
   - component: {fileID: 444477365}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: Cube_five
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1143,7 +1144,8 @@ MonoBehaviour:
   DefaultColor: {fileID: 2100000, guid: e66ac68e0fbe0274d9534b5938a13d30, type: 2}
   HighlightColor: {fileID: 2100000, guid: b68327858081b5a4e91e9fe88fdfbdbf, type: 2}
   CubeNumber: 5
-  audio: {fileID: 0}
+  audio: {fileID: 444477365}
+  number_recording: {fileID: 8300000, guid: 856f590f596c9dc4abecd895c3c0bff8, type: 3}
   renderer: {fileID: 0}
 --- !u!82 &444477365
 AudioSource:
@@ -1155,7 +1157,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 856f590f596c9dc4abecd895c3c0bff8, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -1331,7 +1333,7 @@ GameObject:
   - component: {fileID: 600675083}
   - component: {fileID: 600675084}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: Cube_nine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1426,7 +1428,8 @@ MonoBehaviour:
   DefaultColor: {fileID: 2100000, guid: e66ac68e0fbe0274d9534b5938a13d30, type: 2}
   HighlightColor: {fileID: 2100000, guid: b68327858081b5a4e91e9fe88fdfbdbf, type: 2}
   CubeNumber: 9
-  audio: {fileID: 0}
+  audio: {fileID: 600675084}
+  number_recording: {fileID: 8300000, guid: 67c50bd919aa9884da76142cda1797df, type: 3}
   renderer: {fileID: 0}
 --- !u!82 &600675084
 AudioSource:
@@ -1438,7 +1441,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 67c50bd919aa9884da76142cda1797df, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -1906,6 +1909,7 @@ MonoBehaviour:
   HighlightColor: {fileID: 2100000, guid: b68327858081b5a4e91e9fe88fdfbdbf, type: 2}
   CubeNumber: 1
   audio: {fileID: 1023214628}
+  number_recording: {fileID: 8300000, guid: ba5460ea9534a0c43a6831b683eb1430, type: 3}
   renderer: {fileID: 0}
 --- !u!82 &972981217
 AudioSource:
@@ -1917,7 +1921,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: ba5460ea9534a0c43a6831b683eb1430, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -2165,7 +2169,8 @@ MonoBehaviour:
   DefaultColor: {fileID: 2100000, guid: e66ac68e0fbe0274d9534b5938a13d30, type: 2}
   HighlightColor: {fileID: 2100000, guid: b68327858081b5a4e91e9fe88fdfbdbf, type: 2}
   CubeNumber: 2
-  audio: {fileID: 0}
+  audio: {fileID: 1018761639}
+  number_recording: {fileID: 8300000, guid: 95befb5c2c4371d4588cfac221171f06, type: 3}
   renderer: {fileID: 0}
 --- !u!82 &1018761639
 AudioSource:
@@ -2437,7 +2442,7 @@ GameObject:
   - component: {fileID: 1128332679}
   - component: {fileID: 1128332680}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: Cube_four
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2532,7 +2537,8 @@ MonoBehaviour:
   DefaultColor: {fileID: 2100000, guid: e66ac68e0fbe0274d9534b5938a13d30, type: 2}
   HighlightColor: {fileID: 2100000, guid: b68327858081b5a4e91e9fe88fdfbdbf, type: 2}
   CubeNumber: 4
-  audio: {fileID: 0}
+  audio: {fileID: 1128332680}
+  number_recording: {fileID: 8300000, guid: eed10f4acb457b649bebd6a61792f9da, type: 3}
   renderer: {fileID: 0}
 --- !u!82 &1128332680
 AudioSource:
@@ -2544,7 +2550,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: eed10f4acb457b649bebd6a61792f9da, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -2929,7 +2935,7 @@ GameObject:
   - component: {fileID: 1332541781}
   - component: {fileID: 1332541782}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: Cube_three
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3024,7 +3030,8 @@ MonoBehaviour:
   DefaultColor: {fileID: 2100000, guid: e66ac68e0fbe0274d9534b5938a13d30, type: 2}
   HighlightColor: {fileID: 2100000, guid: b68327858081b5a4e91e9fe88fdfbdbf, type: 2}
   CubeNumber: 3
-  audio: {fileID: 0}
+  audio: {fileID: 1332541782}
+  number_recording: {fileID: 8300000, guid: 5c2010ce866939e4a88d8853f1f83e37, type: 3}
   renderer: {fileID: 0}
 --- !u!82 &1332541782
 AudioSource:
@@ -3036,7 +3043,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 5c2010ce866939e4a88d8853f1f83e37, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -3611,7 +3618,7 @@ GameObject:
   - component: {fileID: 1827187534}
   - component: {fileID: 1827187535}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: Cube_eight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3706,7 +3713,8 @@ MonoBehaviour:
   DefaultColor: {fileID: 2100000, guid: e66ac68e0fbe0274d9534b5938a13d30, type: 2}
   HighlightColor: {fileID: 2100000, guid: b68327858081b5a4e91e9fe88fdfbdbf, type: 2}
   CubeNumber: 8
-  audio: {fileID: 0}
+  audio: {fileID: 1827187535}
+  number_recording: {fileID: 8300000, guid: b38db4e7c57c5d1498334b2dd32da151, type: 3}
   renderer: {fileID: 0}
 --- !u!82 &1827187535
 AudioSource:
@@ -3718,7 +3726,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: b38db4e7c57c5d1498334b2dd32da151, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -3967,6 +3975,7 @@ MonoBehaviour:
   HighlightColor: {fileID: 0}
   CubeNumber: 0
   audio: {fileID: 0}
+  number_recording: {fileID: 0}
   renderer: {fileID: 0}
 --- !u!114 &2006984456
 MonoBehaviour:
@@ -3984,6 +3993,7 @@ MonoBehaviour:
   HighlightColor: {fileID: 0}
   CubeNumber: 0
   audio: {fileID: 0}
+  number_recording: {fileID: 0}
   renderer: {fileID: 0}
 --- !u!1 &2052328061 stripped
 GameObject:
@@ -4001,7 +4011,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 5ec9b1163fd92c740902150071c331fc, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -4163,6 +4173,21 @@ PrefabInstance:
         type: 3}
       propertyPath: CubeNumber
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5827543587066722025, guid: 7a7995c24826db2459d4c96bf5964ee4,
+        type: 3}
+      propertyPath: audio
+      value: 
+      objectReference: {fileID: 2052328066}
+    - target: {fileID: 5827543587066722025, guid: 7a7995c24826db2459d4c96bf5964ee4,
+        type: 3}
+      propertyPath: number_recording
+      value: 
+      objectReference: {fileID: 8300000, guid: 5ec9b1163fd92c740902150071c331fc, type: 3}
+    - target: {fileID: 5827543587066722034, guid: 7a7995c24826db2459d4c96bf5964ee4,
+        type: 3}
+      propertyPath: m_Name
+      value: Cube_six
       objectReference: {fileID: 0}
     - target: {fileID: 5827543587066722037, guid: 7a7995c24826db2459d4c96bf5964ee4,
         type: 3}
