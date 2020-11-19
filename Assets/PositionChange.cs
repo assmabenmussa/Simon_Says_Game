@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PositionChange : MonoBehaviour
 {
+    public GameObject CubeWorld;
     // Start is called before the first frame update
     void Start()
     {
