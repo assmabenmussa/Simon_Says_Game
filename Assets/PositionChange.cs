@@ -10,6 +10,7 @@ public class PositionChange : MonoBehaviour
     private List<Vector3> originalCubePositions = new List<Vector3>();
     private List<Vector3> newPositions = new List<Vector3>();
 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -24,18 +25,15 @@ public class PositionChange : MonoBehaviour
         
     }
 
-    public static void Shuffle<T>(this IList<T> list)  
-    {  
-        Random rng = new Random();  
-        int n = list.Count;  
-        while (n > 1) {  
-            n--;  
-            int k = rng.Next(n + 1);  
-            T value = list[k];  
-            list[k] = list[n];  
-            list[n] = value;  
-        }  
-        return list;
+    public static void Shuffle<T>(IList<T> ts) {
+        var count = ts.Count;
+        var last = count - 1;
+        for (var i = 0; i < last; ++i) {
+            var r = UnityEngine.Random.Range(i, count);
+            var tmp = ts[i];
+            ts[i] = ts[r];
+            ts[r] = tmp;
+        }
     }
 
     public void scatterCubes()
