@@ -17,7 +17,6 @@ public class PositionChange : MonoBehaviour
         for(i=0; i < cubes.Length; i++){
         originalCubePositions.Add(cubes[i].transform.position);
         }
-        shuffleCubes();
     }
 
     // Update is called once per frame
