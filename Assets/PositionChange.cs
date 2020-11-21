@@ -17,12 +17,12 @@ public class PositionChange : MonoBehaviour
         for(i=0; i < cubes.Length; i++){
         originalCubePositions.Add(cubes[i].transform.position);
         }
+        shuffleCubes();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
     }
 
     public static void Shuffle<T>(IList<T> ts) {
@@ -36,14 +36,13 @@ public class PositionChange : MonoBehaviour
         }
     }
 
-    public void scatterCubes()
+    public void shuffleCubes()
     {
-        List<Vector3> shuffledPositions = Shuffle(originalCubePositions);
-        Debug.Log("Starting scatter process before I kill him.");
+        Shuffle(originalCubePositions);
         for(int j = 0; j < cubes.Length; j++){
             // cubes[j].transform.position.x = shuffledPositions[j].x;
-            cubes[j].transform.position = new Vector3(shuffledPositions[j].x, cubes[j].transform.position.y, cubes[j].transform.position.z);
-            Debug.Log("Scattering: " + cubes[j].transform.position.x + shuffledPositions[j].x);
+            cubes[j].transform.position = new Vector3(originalCubePositions[j].x, cubes[j].transform.position.y, cubes[j].transform.position.z);
+            Debug.Log("Scattering: " + cubes[j].transform.position.x + originalCubePositions[j].x);
         }
     }
 }
