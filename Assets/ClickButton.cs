@@ -8,7 +8,6 @@ public class ClickButton : MonoBehaviour
     public Material HighlightColor;
     
     public int CubeNumber = 99;
-    public bool UnclickedColorComplete = false;
     public delegate void ClickEvent(int CubeNumber);
     public event ClickEvent onClick;
 
@@ -32,12 +31,10 @@ public class ClickButton : MonoBehaviour
     private void OnMouseDown () {
         ClickedColor();
         onClick.Invoke(CubeNumber);
-        UnclickedColorComplete = false;
     }
 
     private void OnMouseUp() {
         UnclickedColor();
-        UnclickedColorComplete = true;
     }
 
     public void ClickedColor(){

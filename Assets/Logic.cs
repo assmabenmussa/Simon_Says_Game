@@ -21,7 +21,6 @@ public class Logic : MonoBehaviour
 
     public bool player = false;
     private bool robot = false;
-    public ClickButton UnclickedColorComplete;
 
     // Start is called before the first frame update
     void Start()
@@ -61,7 +60,6 @@ public class Logic : MonoBehaviour
         if(player) {
             if(_number == Numbers[currentlyReachedCube]){
                 currentlyReachedCube += 1;
-                UnclickedColorComplete.UnclickedColorComplete = true;
             }
             else{
                 GameOver();
