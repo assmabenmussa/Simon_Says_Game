@@ -41,7 +41,11 @@ public class PositionChange : MonoBehaviour
         for(int j = 0; j < cubes.Length; j++){
             // cubes[j].transform.position.x = shuffledPositions[j].x;
             cubes[j].transform.position = new Vector3(originalCubePositions[j].x, cubes[j].transform.position.y, cubes[j].transform.position.z);
-            Debug.Log("Scattering: " + cubes[j].transform.position.x);
         }
+    }
+
+    public void MethodTest()
+    {
+        Debug.Log("this is MethodTest being triggered");
     }
 }
