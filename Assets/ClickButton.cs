@@ -32,10 +32,12 @@ public class ClickButton : MonoBehaviour
     private void OnMouseDown () {
         ClickedColor();
         onClick.Invoke(CubeNumber);
+        UnclickedColorComplete = false;
     }
 
     private void OnMouseUp() {
         UnclickedColor();
+        UnclickedColorComplete = true;
     }
 
     public void ClickedColor(){
@@ -49,7 +51,6 @@ public class ClickButton : MonoBehaviour
 
     public void UnclickedColor(){
         renderer.sharedMaterial = DefaultColor;
-        UnclickedColorComplete = true;
     }
 
 
