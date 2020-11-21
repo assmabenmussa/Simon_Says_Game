@@ -21,10 +21,12 @@ public class Logic : MonoBehaviour
 
     public bool player = false;
     private bool robot = false;
+    public ClickButton UnclickedColorComplete;
 
     // Start is called before the first frame update
     void Start()
     {
+        position.shuffleCubes();
         for (int i = 0; i < Cubes.Length; i++)
         {
             Cubes[i].onClick += CubeClicked;
@@ -59,6 +61,7 @@ public class Logic : MonoBehaviour
         if(player) {
             if(_number == Numbers[currentlyReachedCube]){
                 currentlyReachedCube += 1;
+                UnclickedColorComplete.UnclickedColorComplete = true;
             }
             else{
                 GameOver();
@@ -69,7 +72,6 @@ public class Logic : MonoBehaviour
                 currentlyReachedCube = 0;
                 player = false;
                 robot = true;
-                position.shuffleCubes();
             }
         }
     }
