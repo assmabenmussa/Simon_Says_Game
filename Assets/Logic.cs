@@ -13,6 +13,7 @@ public class Logic : MonoBehaviour
 
     public Button Startbutton;
     public ClickButton[] Cubes;
+    public PositionChange position;
     public List<int> Numbers;
 
     public float showtime = 0.5f;
@@ -68,12 +69,12 @@ public class Logic : MonoBehaviour
                 currentlyReachedCube = 0;
                 player = false;
                 robot = true;
+                position.shuffleCubes();
             }
         }
     }
 
     private IEnumerator Robot(){
-        Debug.Log("running IEnumerator");
         yield return new WaitForSeconds(1f);
         for (int i = 0; i < level; i++)
         {
