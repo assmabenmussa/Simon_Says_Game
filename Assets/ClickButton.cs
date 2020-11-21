@@ -8,6 +8,7 @@ public class ClickButton : MonoBehaviour
     public Material HighlightColor;
     
     public int CubeNumber = 99;
+    public bool UnclickedColorComplete = false;
     public delegate void ClickEvent(int CubeNumber);
     public event ClickEvent onClick;
 
@@ -48,6 +49,7 @@ public class ClickButton : MonoBehaviour
 
     public void UnclickedColor(){
         renderer.sharedMaterial = DefaultColor;
+        UnclickedColorComplete = true;
     }
 
 
