@@ -39,6 +39,7 @@ public class ClickButton : MonoBehaviour
 
     public void ClickedColor(){
         renderer.sharedMaterial = HighlightColor;
+        Debug.Log("clicked color:" + HighlightColor);
     }
 
     public void HighlightNumber(){
