@@ -43,9 +43,4 @@ public class PositionChange : MonoBehaviour
             cubes[j].transform.position = new Vector3(originalCubePositions[j].x, cubes[j].transform.position.y, cubes[j].transform.position.z);
         }
     }
-
-    public void MethodTest()
-    {
-        Debug.Log("this is MethodTest being triggered");
-    }
 }
