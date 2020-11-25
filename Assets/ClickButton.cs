@@ -29,11 +29,13 @@ public class ClickButton : MonoBehaviour
     }
 
     private void OnMouseDown () {
+        Debug.Log("Clicked Cube " + CubeNumber);
         ClickedColor();
         onClick.Invoke(CubeNumber);
     }
 
     private void OnMouseUp() {
+        Debug.Log("Clicked Cube " + CubeNumber);
         UnclickedColor();
     }
 
