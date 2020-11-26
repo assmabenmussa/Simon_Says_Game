@@ -19,6 +19,7 @@ public class Logic : MonoBehaviour
     public List<int> Numbers;
 
     public Text ScoreText;
+    public Text GameOverText;
 
     public float showtime = 0.5f;
     public float pausetime = 0.5f;
@@ -59,6 +60,7 @@ public class Logic : MonoBehaviour
 
     void GameOver(){
         Debug.Log("Game is over");
+        GameOverText.text = "Game Over";
         Startbutton.interactable = true;
     }
 
