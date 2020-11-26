@@ -4,17 +4,21 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.UIElements;
 using Button = UnityEngine.UI.Button;
+using Text = UnityEngine.UI.Text;
 
 public class Logic : MonoBehaviour
 {
     public int level;
     private int random;
     private int currentlyReachedCube = 0;
+    private int score;
 
     public Button Startbutton;
     public ClickButton[] Cubes;
     public PositionChange position;
     public List<int> Numbers;
+
+    public Text ScoreText;
 
     public float showtime = 0.5f;
     public float pausetime = 0.5f;
@@ -47,8 +51,10 @@ public class Logic : MonoBehaviour
     {
         robot = true;
         currentlyReachedCube = 0;
+        score = 0;
         level = 1;
         Startbutton.interactable = false;
+        ScoreText.text = score.ToString();
     }
 
     void GameOver(){
@@ -60,6 +66,8 @@ public class Logic : MonoBehaviour
         if(player) {
             if(_number == Numbers[currentlyReachedCube]){
                 currentlyReachedCube += 1;
+                score += 1;
+                ScoreText.text = score.ToString();
             }
             else{
                 GameOver();
